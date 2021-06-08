@@ -1,6 +1,7 @@
+
 namespace RoleplayGame
 {
-    public interface IMagicCharacter: IHeros
+    public interface IMagicCharacter
     {
         void AddItem(IMagicalItem item);
 

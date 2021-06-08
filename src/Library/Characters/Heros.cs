@@ -1,10 +1,16 @@
+using System.Collections.Generic;
 namespace RoleplayGame
 {
-    public abstract class Heros: Character
+    public class Hero : Character
     {
-        
-        int VP { get; set;}
-        
+        public Hero(string name) : base(name)
+        {
+            this.Pv = Pv;
+        }
+        public int Pv { get; set; }
+        public override int AttackValue => base.AttackValue;
+
+        public override int DefenseValue => base.DefenseValue;
 
         
     }
