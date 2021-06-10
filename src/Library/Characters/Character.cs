@@ -5,22 +5,21 @@ namespace RoleplayGame
     {
         protected int health = 100;
 
-        protected List<IItem> items;
-
-        public List<IItem> Items { get => items; set => items = value; }
+        public List<IItem> Items { get; protected set; }
         public Character(string name)
         {
             this.Name = name;
+            this.Items = new List<IItem>();
         }
 
-        public string Name { get; set; }
+        public string Name { get; protected set; }
 
         public virtual int AttackValue
         {
             get
             {
                 int value = 0;
-                foreach (IItem item in this.items)
+                foreach (IItem item in this.Items)
                 {
                     if (item is IAttackItem)
                     {
@@ -36,7 +35,7 @@ namespace RoleplayGame
             get
             {
                 int value = 0;
-                foreach (IItem item in this.items)
+                foreach (IItem item in this.Items)
                 {
                     if (item is IDefenseItem)
                     {
@@ -71,12 +70,12 @@ namespace RoleplayGame
 
         public void AddItem(IItem item)
         {
-            this.items.Add(item);
+            this.Items.Add(item);
         }
 
         public void RemoveItem(IItem item)
         {
-            this.items.Remove(item);
+            this.Items.Remove(item);
         }
     }
 }
