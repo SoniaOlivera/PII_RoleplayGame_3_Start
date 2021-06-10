@@ -3,9 +3,9 @@ namespace RoleplayGame
 {
     public abstract class Character
     {
-        private int health = 100;
+        protected int health = 100;
 
-        private List<IItem> items;
+        protected List<IItem> items;
 
         public List<IItem> Items { get => items; set => items = value; }
         public Character(string name)
