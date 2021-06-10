@@ -38,11 +38,11 @@ namespace RoleplayGame
                         enemy.ReceiveAttack(heroe.AttackValue);
                         if (enemy.Health <= 0)
                         {
-                            heroe.AddVP(enemy.VP);
+                            heroe.AddVP(enemy.Vp);
                             badguylist.Remove(enemy);
                         }
                     }
-                    if (heroe.VP > 4)
+                    if (heroe.Vp > 4)
                     {
                         heroe.AddVP(-5);
                         heroe.Cure();

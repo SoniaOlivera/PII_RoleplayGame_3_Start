@@ -1,23 +1,15 @@
 using System.Collections.Generic;
 namespace RoleplayGame
 {
-    public class Wizard: Character , IMagicCharacter
+    public class Wizard: Heros , IMagicCharacter
     {
-        private int health = 100;
-
-        private List<IItem> items = new List<IItem>();
-
         private List<IMagicalItem> magicalItems = new List<IMagicalItem>();
-
         public Wizard(string name) : base(name)
         {
             this.Name = name;
-            
             this.AddItem(new Staff());
         }
 
- 
-        
         public override int AttackValue
         {
             get
@@ -64,8 +56,6 @@ namespace RoleplayGame
             }
         }
 
-
-
         public void AddItem(IMagicalItem item)
         {
             this.magicalItems.Add(item);
@@ -75,6 +65,5 @@ namespace RoleplayGame
         {
             this.magicalItems.Remove(item);
         }
-
     }
 }
