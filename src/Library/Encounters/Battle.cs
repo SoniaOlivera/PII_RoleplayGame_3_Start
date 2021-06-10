@@ -31,9 +31,9 @@ namespace RoleplayGame
                         }
                     }
                 }
-                foreach (Heros heroe in herolist)
+                foreach (Hero heroe in herolist)
                 {
-                    foreach (Badguys enemy in badguylist)
+                    foreach (BadGuys enemy in badguylist)
                     {
                         enemy.ReceiveAttack(heroe.AttackValue);
                         if (enemy.Health <= 0)
