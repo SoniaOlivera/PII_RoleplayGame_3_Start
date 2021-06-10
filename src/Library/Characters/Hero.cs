@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 namespace RoleplayGame
 {
-    public class Heros : Character
+    public class Hero : Character
     {
         public int Vp { get; private set; }
-        public Heros(string name) : base(name)
+        public Hero(string name) : base(name)
         {
             this.Vp = 0;
         }

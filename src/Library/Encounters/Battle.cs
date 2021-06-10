@@ -31,7 +31,7 @@ namespace RoleplayGame
                         }
                     }
                 }
-                foreach (Heros heroe in herolist)
+                foreach (Hero heroe in herolist)
                 {
                     foreach (BadGuys enemy in badguylist)
                     {
