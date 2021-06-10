@@ -9,12 +9,12 @@ namespace RoleplayGame
             {
                 foreach (BadGuys enemy in badguylist)
                 {
-                    if (badguylist[enemy]  <= herolist.Count )
+                    if ((badguylist.IndexOf(enemy) + 1)  <= herolist.Count )
                     {
-                        herolist[badguylist[enemy]].ReceiveAttack(enemy.AttackValue);
-                        if (herolist[badguylist[enemy]].Health <= 0)
+                        herolist[(badguylist.IndexOf(enemy) + 1)].ReceiveAttack(enemy.AttackValue);
+                        if (herolist[(badguylist.IndexOf(enemy) + 1)].Health <= 0)
                         {
-                            herolist.Remove(badguylist[enemy]);
+                            herolist.Remove(herolist[(badguylist.IndexOf(enemy) + 1)]);
                         }
                     }
                     if (badguylist.Count > herolist.Count )
@@ -33,7 +33,7 @@ namespace RoleplayGame
                 }
                 foreach (Heros heroe in herolist)
                 {
-                    foreach (Badguys enemy in badguylist)
+                    foreach (BadGuys enemy in badguylist)
                     {
                         enemy.ReceiveAttack(heroe.AttackValue);
                         if (enemy.Health <= 0)

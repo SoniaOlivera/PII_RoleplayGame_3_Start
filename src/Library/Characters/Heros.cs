@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 namespace RoleplayGame
 {
-    public class Hero : Character
+    public class Heros : Character
     {
-        public Hero(string name) : base(name)
+        public Heros(string name) : base(name)
         {
             this.Pv = Pv;
         }

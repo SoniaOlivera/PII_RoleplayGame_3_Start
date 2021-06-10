@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 namespace RoleplayGame
 {
-    public class Knight: Hero
+    public class Knight: Heros
     {
 
 
