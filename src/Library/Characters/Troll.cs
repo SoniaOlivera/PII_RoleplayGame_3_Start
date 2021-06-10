@@ -1,18 +1,12 @@
 using System.Collections.Generic;
 namespace RoleplayGame
 {
-    public class Knight: Hero
+    public class Troll : BadGuys
     {
-
-
-        public Knight(string name) : base(name)
+        public Troll(string name) : base(name)
         {
-                       
             this.AddItem(new Sword());
-            this.AddItem(new Armor());
             this.AddItem(new Shield());
         }
-
-        
     }
 }
